@@ -1,0 +1,27 @@
+Plusieurs Pattern ( 5 )
+
+Command -> 
+
+Application -> Principale 
+
+Invoker -> JeuDeLaVie
+
+Receiver -> 
+
+ConcreteCommand ->
+	execute() ->
+	undo() -> 
+
+
+
+
+
+
+Observer -> Espion
+
+Subject ->
+	registerObserver() -> attacher()
+	unRegisterObserver() -> detacher()
+	notifyObserver() -> prevenirEspion()
+
+ConcreateObserver -> JeuDeLaVieGUI 

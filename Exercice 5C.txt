@@ -1,0 +1,9 @@
+//Plusieur design patern
+
+    // Composite = 1 patern
+    // Icompent -> Partie
+    //  +operation -> demande(),getNiveau()
+    // Leaf -> Valeur
+    // Composite -> Groupe
+
+Arbre D'OFFICE -> composite
