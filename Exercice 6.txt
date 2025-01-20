@@ -1,16 +1,18 @@
 Plusieurs Pattern ( 5 )
 
-Command -> 
+Command -> Activite
+	execute() -> activer()
+
+Client -> JeuDeLaVieGUI
 
 Application -> Principale 
 
 Invoker -> JeuDeLaVie
 
-Receiver -> 
+Receiver -> Cellule
 
-ConcreteCommand ->
-	execute() ->
-	undo() -> 
+ConcreteCommand -> Meurt, Vit
+	action() -> vit(), meurt()
 
 
 
@@ -18,6 +20,7 @@ ConcreteCommand ->
 
 
 Observer -> Espion
+	update() -> utiliserRenseignements()
 
 Subject ->
 	registerObserver() -> attacher()
@@ -25,3 +28,45 @@ Subject ->
 	notifyObserver() -> prevenirEspion()
 
 ConcreateObserver -> JeuDeLaVieGUI 
+	update() -> utiliserRenseignements()
+
+
+
+
+Visitor -> Parcourir
+	visit -> ParcourirCelluleVivante, parcourirCelluleMort
+
+Client -> Principale
+
+Element -> cellule
+	Accept() -> generer
+
+ConcreteVisitor -> parcourirTNormal, ParcoutFort
+	visit() ->
+
+
+
+
+
+
+State -> Situation
+	handle() -> vit(), meurt(), toogle(), estVivante(),...
+
+Context -> Cellule
+	request() -> handle() -> vit(), meurt(), toogle(), estVivante(),...
+
+ConcreteStateA -> estMorte
+	handle() -> handle() -> vit(), meurt(), toogle(), estVivante(),...
+
+ConcreateStateB -> estVivante
+	handle() -> handle() -> vit(), meurt(), toogle(), estVivante(),...
+
+
+
+
+
+
+également Singleton -> EstVivante (même chose)
+Singleton -> EstMorte
+	Singleton() -> static estMorte instance
+	getInstance() -> getInstance
